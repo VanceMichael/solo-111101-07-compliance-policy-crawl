@@ -1,0 +1,14 @@
+{
+  "name": "past_knowledge",
+  "run_id": "run-past_knowledge",
+  "sources": [
+    "/rule/v1",
+    "/rule/v2"
+  ],
+  "options": {
+    "effective_on": "2026-11-05",
+    "known_on": "2026-11-06"
+  },
+  "fixture_root": "fixtures",
+  "portal_database": "portal.sqlite3"
+}

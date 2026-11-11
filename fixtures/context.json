@@ -1,0 +1,21 @@
+{
+  "products": [
+    {
+      "sku": "CHILD-1",
+      "category": "child"
+    },
+    {
+      "sku": "ADULT-1",
+      "category": "adult"
+    }
+  ],
+  "audits": [
+    {
+      "id": "AUDIT-1",
+      "sku": "CHILD-1",
+      "on": "2026-11-05",
+      "rule": "CERT-C",
+      "rule_version": 1
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+[
+  {
+    "name": "retroactive",
+    "run_id": "run-retroactive",
+    "sources": [
+      "/rule/v1",
+      "/rule/v2"
+    ],
+    "options": {
+      "effective_on": "2026-11-05",
+      "known_on": "2026-11-11"
+    },
+    "expected": {
+      "selected": {
+        "rule": "CERT-C",
+        "version": 2
+      },
+      "notifications": [
+        {
+          "sku": "CHILD-1",
+          "version": 2
+        }
+      ],
+      "audits": [
+        {
+          "id": "AUDIT-1",
+          "rule_version": 1
+        }
+      ]
+    }
+  },
+  {
+    "name": "past_knowledge",
+    "run_id": "run-past_knowledge",
+    "sources": [
+      "/rule/v1",
+      "/rule/v2"
+    ],
+    "options": {
+      "effective_on": "2026-11-05",
+      "known_on": "2026-11-06"
+    },
+    "expected": {
+      "selected": {
+        "version": 1
+      },
+      "notifications": []
+    }
+  },
+  {
+    "name": "migration",
+    "run_id": "run-migration",
+    "sources": [
+      "/rule/v1",
+      "/rule/migrated"
+    ],
+    "options": {
+      "effective_on": "2026-11-05",
+      "known_on": "2026-11-06"
+    },
+    "expected": {
+      "versions": 1,
+      "carriers": 2,
+      "notifications": []
+    }
+  },
+  {
+    "name": "source_failure",
+    "run_id": "run-source_failure",
+    "sources": [
+      "/rule/v1",
+      "/rule/cached",
+      "/rule/unavailable"
+    ],
+    "options": {
+      "effective_on": "2026-11-05",
+      "known_on": "2026-11-06"
+    },
+    "expected": {
+      "observations": [
+        {
+          "route": "/rule/cached",
+          "result": "unchanged"
+        },
+        {
+          "route": "/rule/unavailable",
+          "result": "unavailable"
+        }
+      ],
+      "selected": {
+        "version": 1
+      }
+    }
+  }
+]

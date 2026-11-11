@@ -1,0 +1,5 @@
+[project]
+name = "q007-compliance-policy-crawl"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = []

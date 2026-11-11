@@ -1,0 +1,15 @@
+{
+  "name": "source_failure",
+  "run_id": "run-source_failure",
+  "sources": [
+    "/rule/v1",
+    "/rule/cached",
+    "/rule/unavailable"
+  ],
+  "options": {
+    "effective_on": "2026-11-05",
+    "known_on": "2026-11-06"
+  },
+  "fixture_root": "fixtures",
+  "portal_database": "portal.sqlite3"
+}

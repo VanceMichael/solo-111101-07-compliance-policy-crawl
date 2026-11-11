@@ -1,0 +1,36 @@
+{
+  "/rule/v1": [
+    {
+      "status": 200,
+      "file": "v1.json",
+      "headers": {
+        "ETag": "v1"
+      }
+    }
+  ],
+  "/rule/v2": [
+    {
+      "status": 200,
+      "file": "v2.json"
+    }
+  ],
+  "/rule/migrated": [
+    {
+      "status": 200,
+      "file": "migrated.json"
+    }
+  ],
+  "/rule/cached": [
+    {
+      "status": 304,
+      "headers": {
+        "ETag": "v1"
+      }
+    }
+  ],
+  "/rule/unavailable": [
+    {
+      "status": 503
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "retroactive",
+  "run_id": "run-retroactive",
+  "sources": [
+    "/rule/v1",
+    "/rule/v2"
+  ],
+  "options": {
+    "effective_on": "2026-11-05",
+    "known_on": "2026-11-11"
+  },
+  "fixture_root": "fixtures",
+  "portal_database": "portal.sqlite3"
+}

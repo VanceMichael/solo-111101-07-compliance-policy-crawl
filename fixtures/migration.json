@@ -1,0 +1,14 @@
+{
+  "name": "migration",
+  "run_id": "run-migration",
+  "sources": [
+    "/rule/v1",
+    "/rule/migrated"
+  ],
+  "options": {
+    "effective_on": "2026-11-05",
+    "known_on": "2026-11-06"
+  },
+  "fixture_root": "fixtures",
+  "portal_database": "portal.sqlite3"
+}
